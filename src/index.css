@@ -1,0 +1,120 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.3rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #e59327;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: #a26d29;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.form-container {
+  width: 60%;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+.form-container h3 {
+  font-size: 2rem;
+}
+
+.form {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form label {
+  font-size: 1.5rem;
+  margin: 1rem auto 0 auto;
+}
+.form input {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  height: 2rem;
+  border: none;
+  border-bottom: 5px solid #b37e37;
+  font-weight: bold;
+  width: 100%;
+  outline: none;
+}
+
+.form button {
+  width: 8rem;
+  margin-top: 1rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.todo-list li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  align-items: center;
+  border: 1px solid white;
+  padding: 8px 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-list li::before {
+  content: "Click to Delete";
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  font-style: italic;
+  background-color: #e59327;
+  display: none;
+  position: absolute;
+  left: -8rem;
+  top: 1rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+.todo-list li:hover::before {
+  display: block;
+}
+.fallback {
+  text-align: center;
+}
